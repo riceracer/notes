@@ -12,3 +12,14 @@ After that you may be able to then use the package manager and re-install depend
 
     sudo apt-get update
     sudo apt-get install -f
+
+## Fix lost menu bar/launcher on Ubuntu 16/unity
+
+Worked for me on Ubuntu 16.04:
+
+```
+sudo apt-get update
+sudo apt-get install --reinstall ubuntu-desktop
+sudo apt-get install unity
+sudo shutdown -r now
+```
