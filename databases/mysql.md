@@ -7,5 +7,5 @@ This can help if you want to connect to a MySQL instance running in a docker con
 * Must use ```-h 127.0.0.01``` instead of "localhost" because that forces it to use TCP instead of a socket
 
 ```
-mysql iuu -u skylight -p -h 127.0.0.1 -P 3306
+mysql DB_NAME -u USERNAME -p -h 127.0.0.1 -P 3306
 ```
