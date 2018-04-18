@@ -1,5 +1,7 @@
-# MySQL
+## Log in to DB
 
+    mysql <db_name> -u <user_name> -p
+    
 ## Force TCP connection to localhost
 
 This can help if you want to connect to a MySQL instance running in a docker container.
@@ -9,3 +11,19 @@ This can help if you want to connect to a MySQL instance running in a docker con
 ```
 mysql DB_NAME -u USERNAME -p -h 127.0.0.1 -P 3306
 ```
+
+## Show all tables
+
+    show tables;
+
+## describe table
+
+    desc <table_name>;
+
+## show create table SQL
+
+    show create table <table_name>;
+
+## Group by date of a datetime field
+
+    select date(date_field), count(1) from my_table group by date(date_field);
