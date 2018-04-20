@@ -106,3 +106,13 @@ s1 = df['foo']
 s2 = df['bar']
 joined = s1.append(s2).unique()
 ```
+
+## Pandas Timestamps
+
+Assuming some input of parseable datetimes (like ISO8601):
+
+```
+sourcetimes = ...  # list of strings
+pd_times = list()
+pd_times.extend([pd.to_datetime(x) for x in sourcetimes])
+```
