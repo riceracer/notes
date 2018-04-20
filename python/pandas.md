@@ -60,3 +60,14 @@ output = pd.DataFrame(data={'lat': round(100 * df['lat']),
                             'size': df['value']},
                       dtype=int)
 ```
+
+# MySQL to Pandas DataFrame
+
+Open a `connection`, using a library like pymysql, then:
+
+```
+import pandas as pd
+
+sql = "SELECT * from TABLENAME where foo = %s"
+df = pd.read_sql(sql, connection, params=['bar'])
+```
