@@ -1,4 +1,10 @@
-# Read Json file to DataFrame and Plot
+# Pandas
+
+```
+import pandas as pd
+```
+
+## Read Json file to DataFrame and Plot
 
 ```
 import pandas as pd
@@ -37,21 +43,21 @@ exclude.plot.scatter(x='lon', y='lat', s=1, title='Combined plot', color='r', ax
 input("Press Enter to exit...")
 ```
 
-# Read CSV file into pandas
+## Read CSV file into pandas
 
 ```
 # If the CSV file has headers we don't have to name the fields like this
 df = pd.read_csv('intput.csv', header=None, names=['field1, 'field2', 'field3'])
 ```
 
-# Output to CSV
+## Output to CSV
 
 ```
 # Index=false to avoid including the numeric row ids in the output csv
 df.to_csv(output_filename, header=False, index=False)
 ```
 
-# Copy columns to new data frame
+## Copy columns to new data frame
 
 ```
 # basically = put the collection of columns/Series in a dict
@@ -61,13 +67,11 @@ output = pd.DataFrame(data={'lat': round(100 * df['lat']),
                       dtype=int)
 ```
 
-# MySQL to Pandas DataFrame
+## MySQL to Pandas DataFrame
 
 Open a `connection`, using a library like pymysql, then:
 
 ```
-import pandas as pd
-
 sql = "SELECT * from TABLENAME where foo = %s"
 df = pd.read_sql(sql, connection, params=['bar'])
 ```
