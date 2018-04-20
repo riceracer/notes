@@ -1,4 +1,8 @@
-# argparse - standard argument parsing
+# Python
+
+Currently these notes apply mostly to Python 3.5 or 3.6.
+
+## argparse - standard argument parsing
 
 * https://docs.python.org/3/howto/argparse.html
 
@@ -14,7 +18,7 @@ if __name__ == '__main__':
     print("{} to {}".format(args.source, args.destination))
 ```
 
-# expiringdict
+## expiringdict
 
 Simple in memory cache with expiring entries.
 
@@ -27,7 +31,7 @@ cache["key"] = "value"
 cache.get("key")
 ```
 
-# iterate over multiple lists together
+## iterate over multiple lists together
 
 Use builtin function `zip()`
 
@@ -39,7 +43,7 @@ for i, j, k in zip(list1, list2, list3):
     print(i, j, k)
 ```
 
-# mysql db connection
+## mysql db connection
 
 * pymysql - https://pymysql.readthedocs.io/en/latest/
 
@@ -66,9 +70,9 @@ with connection.cursor() as cursor:
         print(row['fieldname1'], row)
 ```
 
-# MySQL to Pandas DataFrame
+## MySQL to Pandas DataFrame
 
-Open a connection, like using pymsql, then:
+Open a connection, like using pymysql, then:
 
 ```
 import pandas as pd
