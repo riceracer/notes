@@ -38,3 +38,30 @@ list3 = range(11,16)
 for i, j, k in zip(list1, list2, list3):
     print(i, j, k)
 ```
+
+# mysql db connection
+
+* pymysql - https://pymysql.readthedocs.io/en/latest/
+
+Create Connection:
+```
+import pymysql
+
+connection = pymysql.connect(
+    host='HOSTNAME',
+    user='USERNAME',
+    password='PASSWORD',
+    db='DBNAME',
+    charset='utf8mb4',
+    cursorclass=pymysql.cursors.DictCursor)
+```
+
+Query:
+```
+with connection.cursor() as cursor:
+    sql = "SELECT * from MYTABLE LIMIT 10;"
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    for row in results:
+        print(row['fieldname1'], row)
+```
