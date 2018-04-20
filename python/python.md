@@ -26,3 +26,15 @@ cache = ExpiringDict(max_len=100, max_age_seconds=10)
 cache["key"] = "value"
 cache.get("key")
 ```
+
+# iterate over multiple lists together:
+
+Use builtin function `zip()`
+
+```
+list1 = range(1,6)
+list2 = range(6,11)
+list3 = range(11,16)
+for i, j, k in zip(list1, list2, list3):
+    print(i, j, k)
+```
