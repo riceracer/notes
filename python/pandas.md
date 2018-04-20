@@ -147,3 +147,9 @@ foo = df['FIELDNAME'] - track_df['FIELDNAME'].shift(1)
 # some other calc:
 foo = bar(df['FIELDNAME'], track_df['FIELDNAME'].shift(1))
 ```
+
+## Column min of other columns
+
+```
+df['min_thing'] = df[['thing1', 'thing2']].min(axis=1)
+```
