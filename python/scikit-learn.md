@@ -9,7 +9,7 @@ import sklearn
 ```
 from sklearn import svm
 
-# X_train= features, y_train=labels, X_test,
+# X_train= training features, y_train=labels, X_test= test features
 classifier = svm.SVC(verbose=True)
 classifier.fit(X, y)
 y_pred = classifier.predict(X_test)
@@ -33,8 +33,8 @@ from sklearn.metrics import precision_recall_fscore_support
 
 # classifier = model, X = features, y_true = true labels
 y_pred = classifier.predict(X)
-prdf = precision_recall_fscore_support(y_true, y_pred)
-print(prdf)
+prfs = precision_recall_fscore_support(y_true, y_pred)
+print(prfs)
 ```
 
 * Output is list of Precision, Recall, F-Score, Support for each label
