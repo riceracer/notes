@@ -27,7 +27,7 @@ cache["key"] = "value"
 cache.get("key")
 ```
 
-# iterate over multiple lists together:
+# iterate over multiple lists together
 
 Use builtin function `zip()`
 
