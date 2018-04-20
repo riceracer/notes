@@ -130,3 +130,20 @@ df = df.drop_duplicates(time_column)
 df = df.set_index(time_column)
 df = df.asfreq(time_interval, method='pad')
 ```
+
+## Difference/calculate between successive rows in DataFrame
+
+builtin:
+```
+foo = df['FIELDNAME'].diff()
+```
+
+manual (or for other functions):
+
+```
+# difference
+foo = df['FIELDNAME'] - track_df['FIELDNAME'].shift(1)
+
+# some other calc:
+foo = bar(df['FIELDNAME'], track_df['FIELDNAME'].shift(1))
+```
