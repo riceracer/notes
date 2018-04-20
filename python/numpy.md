@@ -15,3 +15,21 @@ with open(filename, newline='') as csvfile:
     for line in csvfile.readlines():
         npline = np.fromstring(line, sep=',')
 ```
+
+## Effecient 1-by-1 generation of ndarray / stride
+
+Build up python list of arrays, then create the ndarray at the end:
+
+```
+features = ... # 1-D array values
+labels = ... 1-D array of values
+feature_rows = []
+label_rows = []
+num_features = len(features) // len(labels)
+window = 10  # number of positions per segment
+for i in range(len(labels) - window + 1):
+    feature_rows.append(features[i * num_features : i * num_features + window * num_features])
+    label_rows.append(labels[i + window - 1])
+X = np.asarray(feature_rows)
+y = np.array(label_rows)
+```
