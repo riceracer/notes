@@ -65,3 +65,13 @@ with connection.cursor() as cursor:
     for row in results:
         print(row['fieldname1'], row)
 ```
+
+# MySQL to Pandas DataFrame
+
+Open a connection, like using pymsql, then:
+
+```
+import pandas as pd
+sql = "SELECT * from TABLENAME where foo = %s"
+df = pd.read_sql(sql, connection, params=['bar'])
+```
