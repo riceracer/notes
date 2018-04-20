@@ -83,3 +83,26 @@ fieldname = 'names'
 prefix = 'Da'
 filtered_df = df.loc[df[fieldname].str.startswith(prefix)]
 ```
+
+## Groupby
+
+Group and put items into a list
+```
+grouped = df.groupby(['KEYFIELD'])
+values_by_group = grouped.apply(lambda x: (list(x['FIELD1']), list(x['FIELD2'])))
+```
+
+## Keys
+
+Get keys to the df:
+```
+keys = df.keys()
+```
+
+## Append series
+
+```
+s1 = df['foo']
+s2 = df['bar']
+joined = s1.append(s2).unique()
+```
