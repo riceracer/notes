@@ -75,3 +75,11 @@ Open a `connection`, using a library like pymysql, then:
 sql = "SELECT * from TABLENAME where foo = %s"
 df = pd.read_sql(sql, connection, params=['bar'])
 ```
+
+## Filter DataFrame by string prefix
+
+```
+fieldname = 'names'
+prefix = 'Da'
+filtered_df = df.loc[df[fieldname].str.startswith(prefix)]
+```
