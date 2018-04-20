@@ -153,3 +153,15 @@ foo = bar(df['FIELDNAME'], track_df['FIELDNAME'].shift(1))
 ```
 df['min_thing'] = df[['thing1', 'thing2']].min(axis=1)
 ```
+
+## Select set of columns from DataFrame to flatten into feature list
+
+When working with a timeseries dataframe and you want to flatten to a single list of feature and label values
+
+```
+# feature_df = dataframe
+feature_names = ['col1', 'col3', 'col5', 'col7']
+num_elements = len(df) * len(feature_names)
+features = df[feature_names].values.reshape(num_elements)
+labels = df['LABEL_COLUMN'].values
+```
