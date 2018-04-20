@@ -50,7 +50,7 @@ input("Press Enter to exit...")
 df = pd.read_csv('intput.csv', header=None, names=['field1, 'field2', 'field3'])
 ```
 
-## Output to CSV
+## Write to CSV
 
 ```
 # Index=false to avoid including the numeric row ids in the output csv
