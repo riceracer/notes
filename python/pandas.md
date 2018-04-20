@@ -116,3 +116,17 @@ sourcetimes = ...  # list of strings
 pd_times = list()
 pd_times.extend([pd.to_datetime(x) for x in sourcetimes])
 ```
+
+## Sample timeseries
+
+* Real docs: https://pandas.pydata.org/pandas-docs/stable/timeseries.html
+* Assuming a 'time' column with Timestamps in the dataframe:
+* pad/ffill option does a forward fill - fills values with last value in the series before the interval time (typically right choice when you don't want to peak into the future).
+
+```
+time_column = 'event_time'
+time_interval = '15Min'
+df = df.drop_duplicates(time_column)
+df = df.set_index(time_column)
+df = df.asfreq(time_interval, method='pad')
+```
