@@ -79,3 +79,12 @@ import pandas as pd
 sql = "SELECT * from TABLENAME where foo = %s"
 df = pd.read_sql(sql, connection, params=['bar'])
 ```
+
+## Matplotlib virtual env hack on mac
+
+* https://matplotlib.org/faq/osx_framework.html
+
+```
+python -m venv my-virtualenv
+source my-virtualenv/bin/activate
+```
