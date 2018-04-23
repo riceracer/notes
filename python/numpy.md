@@ -33,3 +33,10 @@ for i in range(len(labels) - window + 1):
 X = np.asarray(feature_rows)
 y = np.array(label_rows)
 ```
+
+## Unique count of elements in an array
+
+```
+unique, counts = np.unique(y, return_counts=True)
+count_list = list(zip(unique, counts))
+```
