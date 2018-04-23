@@ -88,3 +88,13 @@ df = pd.read_sql(sql, connection, params=['bar'])
 python -m venv my-virtualenv
 source my-virtualenv/bin/activate
 ```
+
+## PIL - Python Imaging Library
+
+### Get image dimensions
+
+```
+from PIL import Image
+img = Image.open(image_filename)
+width, height = img.size
+```
