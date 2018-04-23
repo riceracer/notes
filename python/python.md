@@ -106,19 +106,12 @@ from functools import wraps
 import time
 
 
-def func_timer(log=None, log_on_start=True):
+def func_timer(printer=print, log_on_start=True):
     def decorator(func):
-
-        def output(msg):
-            if log is None:
-                print(msg)
-            else:
-                log.info(msg)
-
         @wraps(func)
         def wrapper(*args, **kwargs):
             if log_on_start:
-                output("func_timer: Started {}".format(func.__name__))
+                printer("func_timer: Started {}".format(func.__name__))
             start = time.time()
             start_pt = time.process_time()
             result = func(*args, **kwargs)
@@ -126,14 +119,17 @@ def func_timer(log=None, log_on_start=True):
             end_pt = time.process_time()
             delta = end - start
             delta_pt = end_pt - start_pt
-            output("func_timer: Finished {} time={:.3f} ptime={:.3f}".format(func.__name__, delta, delta_pt))
+            printer("func_timer: Finished {} time={:.3f} ptime={:.3f}".format(func.__name__, delta, delta_pt))
             return result
         return wrapper
-        
     return decorator
     
    
-@func_timer(log=my_log_object, log_on_start=False)
-def foobar():
-    do_something_slow()
+@func_timer()
+def foo():
+    pass
+    
+@func_timer(log.info, False)
+def bar():
+    pass
 ```
