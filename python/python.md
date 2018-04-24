@@ -133,3 +133,14 @@ def foo():
 def bar():
     pass
 ```
+
+## built-in functions
+
+### dir
+
+* list contents (methods/attributes of some object)
+
+```
+foo = SomeObject()
+dir(foo)
+```
