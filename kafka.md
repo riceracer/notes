@@ -30,3 +30,9 @@ Shows in sync replicas and status
 ## Read topic-specific config
 
     $KAFKA_HOME/bin/kafka-configs.sh --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --describe
+
+## Set topic-specific config
+
+* This examples sets max message bytes config to 1.5 MB
+
+    $KAFKA_HOME/bin/kafka-configs.sh --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --alter --add-config max.message.bytes=1500012
