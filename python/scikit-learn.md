@@ -4,6 +4,12 @@
 import sklearn
 ```
 
+## Estimators
+
+Classes that implement these methods:
+* fit(X, y)
+* predict(X)
+
 ## Train SVM
 
 ```
