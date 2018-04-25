@@ -35,7 +35,9 @@ Shows in sync replicas and status
 
 * This examples sets max message bytes config to 1.5 MB
 
-    $KAFKA_HOME/bin/kafka-configs.sh --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --alter --add-config max.message.bytes=1500012
+```
+$KAFKA_HOME/bin/kafka-configs.sh --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --alter --add-config max.message.bytes=1500012
+```
 
 ## Check kafka version
 
@@ -43,5 +45,6 @@ Currently kafka bin doesn't have a --version flag. Instead check version numbers
 * First part of version number is scala version, second part is kafka version:
 * kafka_2.12-1.0.0.jar -> scala 2.12, kafka 1.0.0
 
-    ls  $KAFKA_HOME/libs/kafka_*
- 
+```
+ls  $KAFKA_HOME/libs/kafka_*
+``` 
