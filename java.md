@@ -31,4 +31,6 @@ List<Pair<Instant, Instant>> foo = sourceList
                         .stream()
                         .map(item -> Pair.of(item.getStart(), item.getEnd()))
                         .collect(Collectors.toList());
+// sort by left element
+foo.sort(Comparator.comparing(Pair::getLeft));
 ```
