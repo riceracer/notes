@@ -80,3 +80,14 @@ many files:
 Rename a group of files via a regex, e.g. to remove a common prefix:
 
     rename 's/someprefixtoremove//' *.csv
+
+# Split line by char
+
+Sed:
+
+    sed 's/pattern/\n/g'
+
+tr:
+
+    tr ',' $'\n'
+    
