@@ -91,3 +91,6 @@ tr:
 
     tr ',' $'\n'
     
+# Add column of numbers
+
+    cat numbers.txt | paste -sd+ - | bc
