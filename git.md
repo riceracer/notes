@@ -81,3 +81,9 @@ git add .
 git commit
 git push
 ```
+
+# Show remotes
+
+```
+git remote -v
+```
