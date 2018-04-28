@@ -87,3 +87,11 @@ git push
 ```
 git remote -v
 ```
+
+# Change remote on existing repo
+
+```
+git remote -v
+git remote set-url origin https://github.com/USERNAME/NEW_REPO_NAME.git
+git push
+```
