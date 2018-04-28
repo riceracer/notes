@@ -63,3 +63,21 @@ Where username is the github user with access to the repo.
 git fetch origin
 git reset --hard origin/master
 ```
+
+# Add existing code to a newly created repo
+
+* Create a new repo on github, then
+
+```
+export USERNAME=foo
+export PROJECTNAME=bar
+echo "# $PROJECTNAME" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/${USERNAME}/${PROJECTNAME}.git
+git push -u origin master
+git add .
+git commit
+git push
+```
