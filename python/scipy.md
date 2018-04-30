@@ -29,3 +29,14 @@ class NetCDFWrapper:
         longitude = int((longitude + 180.0) * scale)
         return self.data[latitude, longitude]
 ```
+
+Usage:
+
+```
+from . import NetCDFWrapper
+
+with NetCDFWrapper('/tmp/my_netcdf_file.nc') as db:
+...     print(db.lookup_myvariable(134.5243, -45.234))
+... 
+
+```
