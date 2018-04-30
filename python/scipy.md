@@ -36,7 +36,5 @@ Usage:
 from . import NetCDFWrapper
 
 with NetCDFWrapper('/tmp/my_netcdf_file.nc') as db:
-...     print(db.lookup_myvariable(134.5243, -45.234))
-... 
-
+    print(db.lookup_myvariable(134.5243, -45.234)) 
 ```
