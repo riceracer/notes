@@ -94,3 +94,7 @@ tr:
 # Add column of numbers
 
     cat numbers.txt | paste -sd+ - | bc
+
+# sed - Replace text in place in files.
+
+    sed 's/red/blue/g' *.txt
