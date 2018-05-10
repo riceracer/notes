@@ -98,3 +98,7 @@ tr:
 # sed - Replace text in place in files.
 
     sed 's/red/blue/g' *.txt
+
+# make multiline file into comma separated list
+
+    cat foo.txt | tr '\n' '\r' | sed -e 's/\r/, /g'
