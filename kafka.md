@@ -16,6 +16,7 @@ export ZOOKEEPER_SERVER=zookeeper:2181
 * The JMX_PORT thing may or may not be necessary
 * Other args:
     * ```--from-beginning```
+    * ```--property "print.key=true"``` - include key in the output
 
 ## List topics
 
