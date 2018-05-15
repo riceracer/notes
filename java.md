@@ -21,6 +21,12 @@ or
 ## Execute class in maven
 
     mvn compile exec:java -Dexec.mainClass=com.foo.bar.MyMainClass -Dexec.args="arg1 arg2"
+    
+## Verify
+
+Run stuff like findbugs/pmd checks:
+
+    mvn verify
 
 # Streams API
 
