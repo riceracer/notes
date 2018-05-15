@@ -23,6 +23,15 @@ gdalinfo slice.tif | tail
 Change image from geotiff to png:
 
     gdal_translate input.tif output.png -of png
+    
+## ogr2ogr- Dump information from shapefile
+
+```
+INPUT=my_shapefile.shp
+OUTPUT=shape_as_wkt.csv
+ogr2ogr -f CSV ${OUTPUT} ${INPUT} -lco GEOMETRY=AS_WKT
+cat ${OUTPUT}
+```
 
 ## Other gdal tools:
 
