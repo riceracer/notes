@@ -1,4 +1,6 @@
-# Create new branch and sync to remote
+# Git
+
+## Create new branch and sync to remote
 
 ```
 export BRANCH=newbranch
@@ -8,7 +10,7 @@ git branch --set-upstream-to=origin/$BRANCH $BRANCH
 git pull
 ```
 
-# Squash Commits
+## Squash Commits
 
 If needed - use git log to see how many commits you wish to squash on the current branch.
 
@@ -33,7 +35,7 @@ If branch was already pushed to the remote:
 
     git push -f
 
-# Cherry pick
+## Cherry pick
 
 * run ```git pull``` on both the source branch and target branch of the cherry pick action.
 
@@ -49,7 +51,7 @@ git status
 git push
 ```
 
-# Clone private repo
+## Clone private repo
 
 ```
 git clone https://username@github.com/orgname/reponame.git
@@ -57,14 +59,14 @@ git clone https://username@github.com/orgname/reponame.git
 
 Where username is the github user with access to the repo.
 
-# Drop local repo changes and reset to remote state
+## Drop local repo changes and reset to remote state
 
 ```
 git fetch origin
 git reset --hard origin/master
 ```
 
-# Add existing code to a newly created repo
+## Add existing code to a newly created repo
 
 * Create a new repo on github, then
 
@@ -82,16 +84,27 @@ git commit
 git push
 ```
 
-# Show remotes
+## Show remotes
 
 ```
 git remote -v
 ```
 
-# Change remote on existing repo
+## Change remote on existing repo
 
 ```
 git remote -v
 git remote set-url origin https://github.com/USERNAME/NEW_REPO_NAME.git
 git push
+```
+
+## Update local branch after forced update
+
+If someone else forced an update to a branch, say "develop" and you want to get back in sync with remote:
+
+```
+export BRANCH=develop
+git checkout $BRANCH
+git fetch
+git reset origin/$BRANCH --hard
 ```
