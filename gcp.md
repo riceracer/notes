@@ -13,9 +13,19 @@ Run this to set tool context before other commands:
 
 * the -m flag makes copy operations must faster when using wildcards
 
+
+## Rsync between buckets
+
+```
+export SOURCEBUCKET=source-bucket
+export DESTBUCKET=destination-bucket
+export BUCKETPATH=path/to/sync
+gsutil -m rsync -r gs://$SOURCEBUCKET/$BUCKETPATH gs://$DESTBUCKET/$BUCKETPATH
+```
+
 ## Bucket to bucket copy
 
-There is probably a better transfer tool out there:
+Rsync is better, but in case you need to do this manually:
 
 ```
 export DOWNLOADBUCKET=foo
