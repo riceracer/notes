@@ -144,3 +144,11 @@ def bar():
 foo = SomeObject()
 dir(foo)
 ```
+
+## Run ipython in virtual enviornment
+
+Add this to .bashrc or whatever:
+
+```
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+```
