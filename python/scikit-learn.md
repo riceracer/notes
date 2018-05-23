@@ -58,6 +58,20 @@ print(prfs)
 * [Lasso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso) Linear estimator trained with L1 regularization
 * [LogisticRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression) 
 * [SVM](http://scikit-learn.org/stable/modules/svm.html) - Support Vector Machines
-  * SVC() for classification
-  * SVR() for regression
-  * should normalize input features to stddev=1
+
+## SVM
+
+Use:
+* SVC() for classification
+* SVR() for regression
+
+Tips:
+* should normalize input features to have stddev=1
+
+Hyper-parameters:
+* C: penalty parameter
+* kernel: 
+  * 'linear'
+  * 'rbf' - radial basis function + 'gamma'
+  * 'poly' - polynomial + 'degree'
+ 
