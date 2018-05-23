@@ -10,6 +10,9 @@ Classes that implement these methods:
 * `fit(X, y)`
 * `predict(X)`
 
+Hyperparameters for an estimator can be set in the constructor or via:
+* `set_params(**kwargs)`, e.g. `SVC().set_params(kernel='rbf')`
+
 ## Train SVM
 
 ```
