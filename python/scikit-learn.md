@@ -50,3 +50,8 @@ print(prfs)
 ```
 
 * Output is list of Precision, Recall, F-Score, Support for each label
+
+# Estimators
+
+* [Ridge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge) - Ridge regressions / l2 normalization
+** See [Shrinkage](http://scikit-learn.org/stable/tutorial/statistical_inference/supervised_learning.html#shrinkage)
