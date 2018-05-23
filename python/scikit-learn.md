@@ -53,5 +53,6 @@ print(prfs)
 
 # Estimators
 
-* [Ridge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge) - Ridge regressions / l2 normalization
+* [Ridge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge) - Linear estimator with L2 normalization
 ** See [Shrinkage](http://scikit-learn.org/stable/tutorial/statistical_inference/supervised_learning.html#shrinkage)
+* [Lasso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso) Linear estimator trained with L1 regularization
