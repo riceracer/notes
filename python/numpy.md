@@ -55,3 +55,5 @@ y_digits = digits.target
 X_folds = np.array_split(X_digits, 3)
 y_folds = np.array_split(y_digits, 3)
 ```
+
+* In sklearn can also use [KFold](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold)
