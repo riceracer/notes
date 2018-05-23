@@ -13,6 +13,9 @@ Classes that implement these methods:
 Hyperparameters for an estimator can be set in the constructor or via:
 * `set_params(**kwargs)`, e.g. `SVC().set_params(kernel='rbf')`
 
+Get hyperparamers via:
+* `estimator.get_params()`
+
 ## Train SVM
 
 ```
