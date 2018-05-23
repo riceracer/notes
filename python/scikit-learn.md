@@ -60,3 +60,4 @@ print(prfs)
 * [SVM](http://scikit-learn.org/stable/modules/svm.html) - Support Vector Machines
   * SVC() for classification
   * SVR() for regression
+  * should normalize input features to stddev=1
