@@ -40,3 +40,18 @@ y = np.array(label_rows)
 unique, counts = np.unique(y, return_counts=True)
 count_list = list(zip(unique, counts))
 ```
+
+## Create folds
+
+E.g. to split input training data into equally sized non-overlapping sets:
+
+``` 
+# Optional
+from sklearn import datasets
+digits = datasets.load_digits()
+X_digits = digits.data
+y_digits = digits.target
+# make folds
+X_folds = np.array_split(X_digits, 3)
+y_folds = np.array_split(y_digits, 3)
+```
