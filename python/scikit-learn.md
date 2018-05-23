@@ -16,6 +16,9 @@ Hyperparameters for an estimator can be set in the constructor or via:
 Get hyperparamers via:
 * `estimator.get_params()`
 
+Get score for the estimator:
+* `score(X_test, y_test, sample_weight=None)`
+
 ## Train SVM
 
 ```
