@@ -78,3 +78,8 @@ Hyper-parameters:
   * 'rbf' - radial basis function + 'gamma'
   * 'poly' - polynomial + 'degree'
  
+
+# Tools / Utils
+
+* [KFold](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold) k-fold cross validation
+
