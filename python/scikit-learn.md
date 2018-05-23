@@ -81,5 +81,15 @@ Hyper-parameters:
 
 # Tools / Utils
 
-* [KFold](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold) k-fold cross validation
+## Cross validation Generators
 
+See: http://scikit-learn.org/stable/tutorial/statistical_inference/model_selection.html#cross-validation-generators 
+
+* [KFold](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold) k-fold cross validation
+* StratifiedKFold
+* GroupKFold
+* ShuffleSplit
+* StratifiedShuffleSplit
+* GroupShuffleSplit
+* Leave...Out
+* PredefinedSplit
