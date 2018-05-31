@@ -102,3 +102,14 @@ tr:
 # make multiline file into comma separated list
 
     cat foo.txt | tr '\n' '\r' | sed -e 's/\r/, /g'
+
+# awk
+
+## hacky csv to json
+
+```
+export OUTFILE=output.json
+echo '[' > $OUTFILE
+cat input.csv | awk -F',' '{lat = $1 / 100; lon = $2 / 100; printf "{\"lat\":%f, \"lon\": %f },\n", lat, lon}' >> $OUTFILE
+echo ']' >> $OUTFILE
+```
