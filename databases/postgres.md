@@ -1,3 +1,11 @@
+## Connect to remote DB
+
+    psql DB_NAME DB_USER -h HOSTNAME
+
+## Turn off pager
+
+    \pset pager off
+
 ## Get date from timestamp
 
     table.column_name::date = '2018-01-01'
