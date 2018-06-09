@@ -18,6 +18,19 @@ if __name__ == '__main__':
     print("{} to {}".format(args.source, args.destination))
 ```
 
+## read csv
+
+```
+import csv
+
+
+def run(input_csv):
+    with open(input_csv, 'r', newline='') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            print(row['key1'], row['key2'])
+```
+
 ## expiringdict
 
 Simple in memory cache with expiring entries.
