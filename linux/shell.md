@@ -119,3 +119,7 @@ echo ']' >> $OUTFILE
 Make tgz file from multiple inputs:
 
     tar -zcvf archive.tgz input*
+
+Untar/zip
+
+    tar -xvzf archive.tgz
