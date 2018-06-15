@@ -113,3 +113,9 @@ echo '[' > $OUTFILE
 cat input.csv | awk -F',' '{lat = $1 / 100; lon = $2 / 100; printf "{\"lat\":%f, \"lon\": %f },\n", lat, lon}' >> $OUTFILE
 echo ']' >> $OUTFILE
 ```
+
+# tar
+
+Make tgz file from multiple inputs:
+
+    tar -zcvf archive.tgz input*
