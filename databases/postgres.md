@@ -64,3 +64,20 @@ SELECT
 FROM foo
 GROUP BY 1;
 ```
+
+## Query for locked connections
+
+```
+select pid, client_addr, backend_start, state, wait_event_type, substring(query, 0, 100) from pg_stat_activity where state = 'active';
+```
+
+## Abort locked connection by pid
+
+First try:
+
+    select pg_cancel_backend(<PID>)
+
+Fallback:
+
+    select pg_terminate_backend(<PID>)
+ 
