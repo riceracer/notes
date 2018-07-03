@@ -31,3 +31,33 @@ mysql DB_NAME -u USERNAME -p -h 127.0.0.1 -P 3306
 ## Show grants
 
     show grants;
+    show grants for <USER>;
+
+## MySQL export to CSV
+
+First the user needs to have the FILE priveledge (or be root)
+
+Log in as root
+
+    GRANT FILE ON *.* TO '<USER>'@'%';
+    exit
+
+Log in as USER:
+
+```
+SELECT * from <TABLE>
+INTO OUTFILE '/var/lib/mysql-files/output.csv'
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+```
+
+* The OUTFILE path needs to be in the "secure_file_priv" path. You can check what paths are there with this query:
+
+```
+SHOW VARIABLES LIKE "secure_file_priv";
++------------------+-----------------------+
+| Variable_name    | Value                 |
++------------------+-----------------------+
+| secure_file_priv | /var/lib/mysql-files/ |
++------------------+-----------------------+
+```
