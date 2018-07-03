@@ -2,7 +2,7 @@
 
 ## copy file from container to host
 
-docker cp <CONTAINER>:/container/file/path /host/file/path
+    docker cp <CONTAINER>:/container/file/path /host/file/path
 
 # Docker-compose
 
