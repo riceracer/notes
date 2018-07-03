@@ -27,3 +27,7 @@ mysql DB_NAME -u USERNAME -p -h 127.0.0.1 -P 3306
 ## Group by date of a datetime field
 
     select date(date_field), count(1) from my_table group by date(date_field);
+
+## Show grants
+
+    show grants;
