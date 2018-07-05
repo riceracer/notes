@@ -165,3 +165,7 @@ num_elements = len(df) * len(feature_names)
 features = df[feature_names].values.reshape(num_elements)
 labels = df['LABEL_COLUMN'].values
 ```
+
+## Filter by multiple columns
+
+    df2 = df[(df['col1'] == False) & (df['col2'] == True)]
