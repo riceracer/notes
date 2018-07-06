@@ -3,6 +3,14 @@
 Google project to use ML to explore neural network architecture using reinforcement learning.
 * https://research.googleblog.com/2017/05/using-machine-learning-to-explore.html
 
+### Bag of Words
+
+Feature extraction method for text: takes an input document and outputs an unordered collection of word frequencies.
+
+* Looses context of work positioning, though you can add context with n-grams.
+* Typically will remove stopwords (high-frequency words with little contextual meaning in isolation: "a", "the", ...).
+* Creates a high-dimensional sparse output for a given document. Simple model is a one-hot encoding or vector frequency.
+
 ### CIFAR-10
 
 60k 32x32 color images of 10 classes,6000 images per class.
