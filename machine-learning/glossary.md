@@ -22,6 +22,10 @@ Feature extraction method for text: takes an input document and outputs an unord
 Common Objects in Context - dataset of 300K images of 80 most common object categories.
 * http://cocodataset.org/
 
+### CSR Matrix
+
+Compressed Sparse Row matrix - memory efficient storage for sparse matricies. (aka CRS - Compressed Row Storage).
+
 ### Feature Extraction
 
 Transforming data, such as text and images, into numerical features that can be used by machine learning.
