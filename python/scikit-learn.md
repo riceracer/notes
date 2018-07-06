@@ -93,3 +93,26 @@ See: http://scikit-learn.org/stable/tutorial/statistical_inference/model_selecti
 * GroupShuffleSplit
 * Leave...Out
 * PredefinedSplit
+
+## DictVectorizer
+
+Can take python dicts as input, and transforms them into one-hot coding for categorical features and numerical features.
+
+```
+>>> measurements = [
+...     {'city': 'Dubai', 'temperature': 33.},
+...     {'city': 'London', 'temperature': 12.},
+...     {'city': 'San Francisco', 'temperature': 18.},
+... ]
+
+>>> from sklearn.feature_extraction import DictVectorizer
+>>> vec = DictVectorizer()
+
+>>> vec.fit_transform(measurements).toarray()
+array([[  1.,   0.,   0.,  33.],
+       [  0.,   1.,   0.,  12.],
+       [  0.,   0.,   1.,  18.]])
+
+>>> vec.get_feature_names()
+['city=Dubai', 'city=London', 'city=San Francisco', 'temperature']
+```
