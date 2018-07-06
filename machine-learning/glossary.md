@@ -14,6 +14,10 @@ Google project to use ML to explore neural network architecture using reinforcem
 Common Objects in Context - dataset of 300K images of 80 most common object categories.
 * http://cocodataset.org/
 
+### Feature Extraction
+
+Transforming data, such as text and images, into numerical features that can be used by machine learning.
+
 ### Penn Treebank
  
 University of Pennsylvania dataset of 1 million works annotated in Treebank II style, fully tagged version of Brown Corpus.
