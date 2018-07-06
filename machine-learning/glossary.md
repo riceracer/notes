@@ -18,6 +18,13 @@ Common Objects in Context - dataset of 300K images of 80 most common object cate
 
 Transforming data, such as text and images, into numerical features that can be used by machine learning.
 
+### Feature Hashing
+
+Fast and space efficient way to vectorize features, e.g. instead of making a bag of words lookup map for text input, hash words directly to a vector representation.
+
+* Avoids the sparsity/dimensionality increase of one-hot encoding
+* Does not have the ability to do an exact inverse mapping of feature value to source feature.
+
 ### One-hot Coding
 
 Encoding for categorical, non-ordinal features: given K categories, create a binary feature for each of the categories.
