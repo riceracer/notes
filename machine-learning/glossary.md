@@ -18,6 +18,12 @@ Common Objects in Context - dataset of 300K images of 80 most common object cate
 
 Transforming data, such as text and images, into numerical features that can be used by machine learning.
 
+### One-hot Coding
+
+Encoding for categorical, non-ordinal features: given K categories, create a binary feature for each of the categories.
+
+* Downsides: for high cardinality this results in sparse high-dimensional data.
+
 ### Penn Treebank
  
 University of Pennsylvania dataset of 1 million works annotated in Treebank II style, fully tagged version of Brown Corpus.
