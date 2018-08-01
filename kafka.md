@@ -57,3 +57,9 @@ ls  $KAFKA_HOME/libs/kafka_*
 ```
 $KAFKA_HOME/bin/kafka-consumer-groups.sh --bootstrap-server $KAFKA_SERVER --list
 ```
+
+## Describe consumer group (show per-partition lag and offsets)
+
+```
+$KAFKA_HOME/bin/kafka-consumer-groups.sh --bootstrap-server $KAFKA_SERVER --describe --group CONSUMER-GROUP
+```
