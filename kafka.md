@@ -49,3 +49,11 @@ Currently kafka bin doesn't have a --version flag. Instead check version numbers
 ```
 ls  $KAFKA_HOME/libs/kafka_*
 ``` 
+
+## List Consumer Groups
+
+(This does not list zookeeper-based consumers)
+
+```
+$KAFKA_HOME/bin/kafka-consumer-groups.sh --bootstrap-server $KAFKA_SERVER --list
+```
