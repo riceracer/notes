@@ -26,7 +26,7 @@ export ZOOKEEPER_SERVER=zookeeper:2181
 
 Shows in sync replicas and status
 
-    $KAFKA_HOME/bin/kafka-topics.sh --zookeeper=$ZOOKEEPER_SERVER --topic my-topic-name --describe
+    $KAFKA_HOME/bin/kafka-topics.sh --zookeeper=$ZOOKEEPER_SERVER --describe --topic my-topic-name 
 
 ## Read topic-specific config
 
