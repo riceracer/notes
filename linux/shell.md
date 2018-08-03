@@ -123,3 +123,11 @@ Make tgz file from multiple inputs:
 Untar/zip
 
     tar -xvzf archive.tgz
+
+# zip
+
+```
+zip archivename file1 file2
+unzip archivename.zip
+```
+* saves archive as archivename.zip
