@@ -9,6 +9,10 @@ export KAFKA_SERVER=kafka:9092
 export ZOOKEEPER_SERVER=zookeeper:2181
 ```
 
+## List topics
+
+    $KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZOOKEEPER_SERVER --list
+
 ## Read topic with console consumer
 
     $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server $KAFKA_SERVER --topic my-topic-name
@@ -17,10 +21,6 @@ export ZOOKEEPER_SERVER=zookeeper:2181
 * Other args:
     * ```--from-beginning```
     * ```--property "print.key=true"``` - include key in the output
-
-## List topics
-
-    $KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZOOKEEPER_SERVER --list
 
 ## Describe topic
 
