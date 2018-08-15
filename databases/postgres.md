@@ -6,6 +6,10 @@
 
     \pset pager off
 
+## Toggle query timing
+
+    \timing
+
 ## Get date from timestamp
 
     table.column_name::date = '2018-01-01'
