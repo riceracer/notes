@@ -51,14 +51,25 @@ Add a to_json method to objects for basic json serialization. (not foolproof, bu
 ```
 import json
 
-class MyClass:
+        
+class ToJsonMixin:
+    def to_json(self):
+        def json_serialize(obj):
+            if isinstance(obj, datetime.datetime):
+                return obj.astimezone(tzutc()).strftime("%Y-%m-%dT%H:%M:%SZ")
+            elif isinstance(obj, uuid.UUID):
+                return str(obj)
+            else:
+                return obj.__dict__
+        return json.dumps(self, default=json_serialize, separators=(',', ':'))
+        
+
+class MyClass(ToJsonMixin):
     def __init__(self, foo, bar):
         self.foo = foo
         self.bar = bar
-
-    def to_json(self):
-        return json.dumps(self, default=lambda o: o.__dict__)
 ```
+
 
 ## iterate over multiple lists together
 
