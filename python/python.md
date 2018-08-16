@@ -44,6 +44,22 @@ cache["key"] = "value"
 cache.get("key")
 ```
 
+## json
+
+Add a to_json method to objects for basic json serialization. (not foolproof, but quick and easy hack):
+
+```
+import json
+
+class MyClass:
+    def __init__(self, foo, bar):
+        self.foo = foo
+        self.bar = bar
+
+    def to_json(self):
+        return json.dumps(self, default=lambda o: o.__dict__)
+```
+
 ## iterate over multiple lists together
 
 Use builtin function `zip()`
