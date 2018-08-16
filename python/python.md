@@ -62,8 +62,12 @@ class ToJsonMixin:
                 return obj.astimezone(tzutc()).strftime("%Y-%m-%dT%H:%M:%SZ")
             elif isinstance(obj, uuid.UUID):
                 return str(obj)
-            else:
+            elif isinstance(obj, decimal.Decimal):
+                return str(obj)
+            elif hasattr(obj, '__dict__'):
                 return obj.__dict__
+            else:
+                return str(obj)
         return json.dumps(self, default=json_serialize, separators=(',', ':'))
         
 
