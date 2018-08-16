@@ -49,6 +49,9 @@ cache.get("key")
 Add a to_json method to objects for basic json serialization. (not foolproof, but quick and easy hack):
 
 ```
+import datetime
+import uuid
+from dateutil.tz import tzutc
 import json
 
         
