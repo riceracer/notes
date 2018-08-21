@@ -3,6 +3,19 @@
 ## copy file from container to host
 
     docker cp <CONTAINER>:/container/file/path /host/file/path
+    
+## Cleanup containers
+
+```
+docker container ls -a
+docker container rm CONTAINER_IR
+```
+
+## Prune unused images
+
+Remove local images that are no longer associated with a container
+
+    docker image prune
 
 # Docker-compose
 
