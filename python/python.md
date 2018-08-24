@@ -210,3 +210,11 @@ Add this to .bashrc or whatever:
 ```
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 ```
+
+## None-safe min/max
+
+```
+foo = [-10, 30, None, -50, 100, 15, None]
+min(x for x in foo if x is not None)
+max(x for x in foo if x is not None)
+```
