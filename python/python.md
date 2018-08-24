@@ -2,6 +2,17 @@
 
 Currently these notes apply mostly to Python 3.5 or 3.6.
 
+## Generic script main method
+
+```
+def run():
+    print("hello")
+
+
+if __name__ == '__main__':
+    run()
+```
+
 ## argparse - standard argument parsing
 
 * https://docs.python.org/3/howto/argparse.html
