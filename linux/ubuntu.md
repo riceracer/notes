@@ -23,3 +23,9 @@ sudo apt-get install --reinstall ubuntu-desktop
 sudo apt-get install unity
 sudo shutdown -r now
 ```
+
+## Reset a user's password
+
+```
+sudo passwd USERNAME
+```
