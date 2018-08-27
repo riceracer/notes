@@ -41,3 +41,15 @@ docker-compose run --entrypoint COMMAND CONTAINER_NAME
 ```
 
 * https://docs.docker.com/compose/reference/run/
+
+# Nvidia docker
+
+## Install nvidia-docker
+
+Follow instructions here: https://github.com/NVIDIA/nvidia-docker
+
+## Test nvidia-docker
+
+```
+docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
+```
