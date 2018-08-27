@@ -29,3 +29,9 @@ sudo shutdown -r now
 ```
 sudo passwd USERNAME
 ```
+
+## Install ntp (keep time synchronized)
+
+```
+sudo apt-get install ntp
+```
