@@ -4,4 +4,6 @@
 
 * Command refreshes usage every 1 second
 
-    nvidia-smi -l 1
+```
+nvidia-smi -l 1
+```
