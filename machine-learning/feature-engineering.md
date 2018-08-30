@@ -47,4 +47,14 @@ Tools:
 Tools:
 * `sklearn.preprocessing.Binarizer` - takes threshold input to select the 0/1 cutoff.
 
+### Binning
+
+* Split continuous numerical values into fixed number of bins
+ * Fixed-width bin - bin assignment has uniform width in the feature scale - may lead to uneven bin counts on skewed distributions
+ * Quantile/Adaptive binning - analyze data distribution and assign bin thresholds to divide data evenly between bins.
+ * Log transform binning - can bin based log(feature value) (typically do log(1 + value)
+ 
+ Tools:
+ * `sklearn.processing`
+
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
