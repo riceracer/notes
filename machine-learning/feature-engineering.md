@@ -23,7 +23,7 @@
 
 ## Numerical Features
 
-## Imputing missing numerical features
+### Imputing missing numerical features
 
 * Mean - doesn't change the natural mean of source data
 * Median - more robust to outliers
@@ -33,7 +33,13 @@
 Tools:
 * `sklearn.preprocessing.Imputer`
 
-###
+### Rounding
+
+* Lossy compression - only retain most N significant digits of data
+* Can be used to convert numerical features to categorical
+ * e.g. percentages/iles to deciles
+
+## Binarization
 
 
 
