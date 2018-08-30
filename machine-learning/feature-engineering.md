@@ -59,4 +59,17 @@ Tools:
  
 ### Scaling
 
+Some models are sensitive to scale of the data, so scale features to each have roughly the same mean and standard deviation
+
+* MinMax Scaling - moves variable value to range of 0 to 1
+ * `x' = (x - min(x)) / (max(x) - min(x))`
+* Standard (Z) Scaling - moves features to have mean 0 and variance 1
+ * `x' = (x - mean(x)) / var(x)
+
+Tools:
+* `sklearn.preprocessing.MinMaxScaler`
+* `sklearn.preprocessing.scale`
+
+
+
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
