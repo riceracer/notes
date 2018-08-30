@@ -21,6 +21,20 @@
   * Instead of single summary of events, break down aggregation per category
   * e.g. orders per category, spend per category, etc
 
+## Numerical Features
+
+## Imputing missing numerical features
+
+* Mean - doesn't change the natural mean of source data
+* Median - more robust to outliers
+* Mode
+* Model - impute values from known features. However can add some bias to the imputed column.
+
+Tools:
+* `sklearn.preprocessing.Imputer`
+
+###
 
 
-source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
+
+original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
