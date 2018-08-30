@@ -41,6 +41,10 @@ Tools:
 
 ## Binarization
 
-
+* Transform discrete or continuous values to binary
+ * e.g. counts to 0/1 (1 if count >= 1, 0 otherwise)
+ 
+Tools:
+* `sklearn.preprocessing.Binarizer` - takes threshold input to select the 0/1 cutoff.
 
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
