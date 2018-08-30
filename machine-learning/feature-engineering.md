@@ -39,7 +39,7 @@ Tools:
 * Can be used to convert numerical features to categorical
  * e.g. percentages/iles to deciles
 
-## Binarization
+### Binarization
 
 * Transform discrete or continuous values to binary
  * e.g. counts to 0/1 (1 if count >= 1, 0 otherwise)
