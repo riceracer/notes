@@ -135,6 +135,35 @@ Tools
 * `tf.contrib.layers.sparse_column_with_hash_bucket`
 * `tf.contrib.layers.embedding_column`
 
+## Temporal Features
 
+### Time Zones
+
+* May want to convert times to local time features of the event location
+
+### Time binning
+
+* apply binning on time of day to make it more flexible and general
+* Can also apply binning to dates: day of week, weekend, month, quarter
+
+### Time series trends
+
+* Instead of just capturing average/total spend, quantize statistics by time buckets:
+    * spend last week, last month, last quarter, last year
+    * this separates declining trends from increasing ones which may have same total
+
+### Time to events
+
+* Factor in time to holidays or significant days in the domain to behavior
+    * days to Christmas, days to nearest holiday, etc
+
+### Time difference features
+
+* features of date interaction
+    * time between last purchase and current browsing behavior
+    
+## Spatial Features
+
+### 
 
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
