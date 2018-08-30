@@ -7,6 +7,7 @@
 * "Missing"/"Not available" category
 * Imputed values:
   * global mean/mode/median assignment
+  * random imputation - sample value at random from the distribution of that field
   * imputed assignment based on known variable
   * carryforward value from last known
   * regression imputation - model to predict missing values from known values
