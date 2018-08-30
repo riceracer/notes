@@ -87,4 +87,22 @@ Add combinations of features to linear models to increase their complexity.
 Tools:
 * `sklearn.preprocessing.PolynomialFeatures`
 
+## Categorical Features
+
+Issues:
+* non-numeric so need to be mapped to numbers or vectors to be used in models
+* high cardinality can cause issues (sparse encodings)
+* can be difficult to impute missing values
+* categories may be dynamic - new ones added after training the model
+* need to consider if categories are ordinal or non-ordinal
+
+### One-hot encoding
+
+* Transform *m* category values into *m* binary features
+    * or *m-1* binary features as to micro-optimize an implicit cateogry 
+* Works for constrained categorical sets (M < 100), however doesn't scale for 100,000s of cateories (document ids, user ids, large hierarchies)
+  
+Tools:
+* `sklearn.preprocessing.OneHotEncoder` 
+
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
