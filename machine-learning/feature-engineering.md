@@ -64,12 +64,20 @@ Some models are sensitive to scale of the data, so scale features to each have r
 * MinMax Scaling - moves variable value to range of 0 to 1
  * `x' = (x - min(x)) / (max(x) - min(x))`
 * Standard (Z) Scaling - moves features to have mean 0 and variance 1
- * `x' = (x - mean(x)) / var(x)
+ * `x' = (x - mean(x)) / var(x)`
 
 Tools:
 * `sklearn.preprocessing.MinMaxScaler`
 * `sklearn.preprocessing.scale`
 
+### Normalization
+
+Scale individual samples (rows -not the feature columns) to be a unit vector.
+* `x' = x / srqt(x_1^2 + ... + x_m^2)`
+* Useful where a vector space model is assumed - text classification, clustering, or kernels comparing similarity of samples.
+
+Tools:
+* `sklearn.preprocessing.normalize`
 
 
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
