@@ -164,6 +164,72 @@ Tools
     
 ## Spatial Features
 
-### 
+### Types of spatial variables
+
+May come originally in many forms:
+* lat/lon
+* street addresses
+* zip codes, cities, states, etc - may need to map to raw coordinates
+
+### Derived features
+
+Given some spatial location, derive properties related to location:
+* distance to nearest store of interest
+
+### Spatial Enrichment
+
+Given location, replace the location with a feature based on the location:
+* depth of sea or elevation
+* household median income
+
+## Textual Data
+
+### Text preprocessing considerations
+
+Cleaning:
+* lower/uppercasing
+* accent character conversion
+* removing non-alphanumeric or non-alpha chars
+
+Tokenizing:
+* encoding punctuation marks, phrases
+* n-grams, skip-grams, char-grams
+* affixes
+
+Removing:
+* stopwords
+* rare words
+* common words
+
+Rooting:
+* spell correction
+* chop
+* stem
+* Lemmatize
+
+Enriching
+* entity insertion / extraction
+* parse trees
+
+### Text vectorization
+
+Convert text to a fixed length feature vector (e.g. 50-128 length vector encoding)
+
+* Bag of Words (BoW) - like 1-hot encoding for words - sparse and wide
+* TF-IDF - term frequency - inverse document frequency - adds weighting of word uniqueness
+* Embeddings - Word2Vec, etc., encodings built from corpuses and autoencoders
+* Topic models - LDA
+
+Tools
+* `sklearn.feature_extraction.text.CountVectorizer`
+* `sklearn.feature_extraction.text.TfidfVectorizer`
+
+### Text similarity
+
+* Can use cosine similarity of vectors to calculate how similar one vectorized text is to another
+
+Tools:
+* `sklearn.metrics.pairwise.cosine_similarity`
+
 
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
