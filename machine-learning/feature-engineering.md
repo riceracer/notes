@@ -233,5 +233,12 @@ Tools
 Tools:
 * `sklearn.metrics.pairwise.cosine_similarity`
 
+## Feature Selection
+
+* Filtering - look for correlation or mutual information between each feature and the response variable
+* Wrapper method - optimize the subset of features selected for each model (stepwise feature subset selection)
+* Embedded method - feature selection as intrisic part of model training (feature importance from decision trees)
+
+## Credit
 
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
