@@ -218,7 +218,7 @@ Convert text to a fixed length feature vector (e.g. 50-128 length vector encodin
 * Bag of Words (BoW) - like 1-hot encoding for words - sparse and wide
 * TF-IDF - term frequency - inverse document frequency - adds weighting of word uniqueness
 * Embeddings - Word2Vec, etc., encodings built from corpuses and autoencoders
-* Topic models - LDA
+* Topic models - LDA, LSA, NMF
 
 Tools
 * `sklearn.feature_extraction.text.CountVectorizer`
@@ -226,7 +226,9 @@ Tools
 
 ### Text similarity
 
-* Can use cosine similarity of vectors to calculate how similar one vectorized text is to another
+* Token similarity: number of common tokens (or tf-idf terms) between two texts
+* Edit distance: distance from one word/string to another via number of edits to transform from one to another
+* Cosine Similarity: Can use cosine similarity of vectors to calculate how similar one vectorized text is to another
 
 Tools:
 * `sklearn.metrics.pairwise.cosine_similarity`
