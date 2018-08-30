@@ -52,7 +52,7 @@ Tools:
 Split continuous numerical values into fixed number of bins
 * Fixed-width bin - bin assignment has uniform width in the feature scale - may lead to uneven bin counts on skewed distributions
 * Quantile/Adaptive binning - analyze data distribution and assign bin thresholds to divide data evenly between bins.
-* Log transform binning - can bin based log(feature value) (typically do log(1 + value)
+* Log transform binning - can bin based log(feature value) (typically do `log(1 + value)`)
  
 Tools:
 * `sklearn.processing`
@@ -62,9 +62,9 @@ Tools:
 Some models are sensitive to scale of the data, so scale features to each have roughly the same mean and standard deviation
 
 * MinMax Scaling - moves variable value to range of 0 to 1
- * `x' = (x - min(x)) / (max(x) - min(x))`
+    * `x' = (x - min(x)) / (max(x) - min(x))`
 * Standard (Z) Scaling - moves features to have mean 0 and variance 1
- * `x' = (x - mean(x)) / var(x)`
+    * `x' = (x - mean(x)) / var(x)`
 
 Tools:
 * `sklearn.preprocessing.MinMaxScaler`
