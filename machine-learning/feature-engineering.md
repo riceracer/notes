@@ -79,5 +79,12 @@ Scale individual samples (rows -not the feature columns) to be a unit vector.
 Tools:
 * `sklearn.preprocessing.normalize`
 
+### Interaction features
+
+Add combinations of features to linear models to increase their complexity.
+* `y = x1 + x2 + x1*x2 + x1^2 * x2^2 ...`
+
+Tools:
+* `sklearn.preprocessing.PolynomialFeatures`
 
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
