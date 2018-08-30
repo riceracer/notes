@@ -198,8 +198,8 @@ Tokenizing:
 
 Removing:
 * stopwords
-* rare words
-* common words
+* rare words - removing words that only appear once, are garbage text, etc
+* common words - the, a, he, because,...
 
 Rooting:
 * spell correction
