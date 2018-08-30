@@ -105,4 +105,36 @@ Issues:
 Tools:
 * `sklearn.preprocessing.OneHotEncoder` 
 
+### Feature hashing
+
+* Instead of one-hot encoding, hash categorical features into vectors of fixed length (e.g. n=10, 20 or 50)
+* Gives a much denser encoding than 1-hot
+* Can have collisions between categories (but can tune category cardinality vs encoding length).
+
+Tools:
+* `sklearn.feature_extraction.FeatureHasher`
+
+### Bin Counting / Category replacement
+
+* Replace the category variable with one or more statistics representing the category
+   * count/sum of category attribute (e.g. number of movies)
+   * average/mean value of category (conversion rate, price, income, age)
+
+### Rank encoding
+
+* Replace category label with a rank of the category over some metric
+    * replace product category with ad conversion rank 1, 2, 3, ...
+
+### Category embedding / auto-encoder
+
+* Use a neural network architecture to map category to a vector embedding (via encoder/decoder)
+* Denser representation than 1-hot
+* May have more meaningful dense representation than pure feature hashing
+
+Tools
+* `tf.contrib.layers.sparse_column_with_hash_bucket`
+* `tf.contrib.layers.embedding_column`
+
+
+
 original source: https://www.slideshare.net/gabrielspmoreira/feature-engineering-getting-most-out-of-data-for-predictive-models
