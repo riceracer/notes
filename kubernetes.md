@@ -13,3 +13,7 @@
 # Scale deployment
 
     kubectl scale deployment/SERVICENAME --replicas=0
+
+# Show logs for pod
+
+    kubectl logs PODNAME
