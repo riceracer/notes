@@ -9,3 +9,7 @@
 # Scale stateful set
 
     kubectl scale sts SETNAME --replicas=0
+
+# Scale deployment
+
+    kubectl scale deployment/SERVICENAME --replicas=0
