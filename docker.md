@@ -17,6 +17,10 @@ Remove local images that are no longer associated with a container
 
     docker image prune
 
+## Clean dangling/intermediate images
+
+    docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+
 # Docker-compose
 
 ## run a container 
