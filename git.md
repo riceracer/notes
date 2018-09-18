@@ -108,3 +108,15 @@ git checkout $BRANCH
 git fetch
 git reset origin/$BRANCH --hard
 ```
+
+## Remove a commit that isn't at HEAD
+
+If you want to remove a commit with sha "SHA" from a branch that doesn't happen to be the last commit, try:
+
+```
+git rebase -p --onto SHA^ SHA
+```
+
+* You may need to fix conflicts. If so then use `git status` to see what needs fixing, fix it, then do `git rebase --continue`
+* If the branch is pushed remote, then it will be diverged now, so you'll have to do `git push -f` to force 
+  the overwriting the remote (do this with caution of course!).
