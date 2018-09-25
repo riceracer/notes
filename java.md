@@ -40,3 +40,14 @@ List<Pair<Instant, Instant>> foo = sourceList
 // sort by left element
 foo.sort(Comparator.comparing(Pair::getLeft));
 ```
+
+# Lambdas
+
+## Inline sort a comparable class.
+
+* Say of objects compare a list of objects with `Instant` property time. Use this to sort the objects by time:
+
+```
+List<TimeObject> positions = ...;
+positions.sort(Comparator.comparing(pos -> pos.getTime()));
+```
