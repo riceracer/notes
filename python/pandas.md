@@ -178,3 +178,7 @@ labels = df['LABEL_COLUMN'].values
 
     df1 = df.where((pd.notnull(df)), None)
     
+## Show value counts of a column in a dataframe
+
+    df.field_name.value_counts()
+
