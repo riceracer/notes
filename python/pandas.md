@@ -182,3 +182,9 @@ labels = df['LABEL_COLUMN'].values
 
     df.field_name.value_counts()
 
+## Print ALL rows of a data frame
+
+```
+with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    print(df)
+```
