@@ -173,7 +173,8 @@ labels = df['LABEL_COLUMN'].values
 ## Find rows with NaN
 
     df.loc[df['field1'].isna(), :]
+    
+## Replace rows of NaN with Nones
 
-replace with some value (e.g. None)
-
-    df.loc[df['field1'].isna(), 'field1'] = None
+    df1 = df.where((pd.notnull(df)), None)
+    
