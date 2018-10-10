@@ -169,3 +169,11 @@ labels = df['LABEL_COLUMN'].values
 ## Filter by multiple columns
 
     df2 = df[(df['col1'] == False) & (df['col2'] == True)]
+
+## Find rows with NaN
+
+    df.loc[df['field1'].isna(), :]
+
+replace with some value (e.g. None)
+
+    df.loc[df['field1'].isna(), 'field1'] = None
