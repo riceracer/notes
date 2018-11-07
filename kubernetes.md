@@ -17,3 +17,7 @@
 # Show logs for pod
 
     kubectl logs PODNAME
+
+# Describe a service, deployment or whatever
+
+    kubectl describe deployment NAME
