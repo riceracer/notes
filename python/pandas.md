@@ -188,3 +188,13 @@ labels = df['LABEL_COLUMN'].values
 with pd.option_context('display.max_rows', None, 'display.max_columns', None):
     print(df)
 ```
+
+## Get distance to location in Data Frame
+
+```
+from geopy.distance import vincenty
+
+# target must be in lat, lon order
+target = (33.0544, 33.6637)
+df['dist2target'] = df.apply(lambda x: vincenty((x['lat'], x['lon']), target).km, axis=1)
+```
