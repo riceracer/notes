@@ -90,3 +90,9 @@ Fallback:
 ```
 select * from schema_v('TABLENAME_partition');
 ```
+
+Skip empty partitions:
+
+```
+select * from schema_v('TABLENAME_partition') where ds_raw > 0;
+```
