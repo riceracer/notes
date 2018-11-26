@@ -85,3 +85,8 @@ Fallback:
 
     select pg_terminate_backend(<PID>)
  
+## Fast query partition table counts
+
+```
+select * from schema_v('TABLENAME_partition');
+```
