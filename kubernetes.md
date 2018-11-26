@@ -21,3 +21,9 @@
 # Describe a service, deployment or whatever
 
     kubectl describe deployment NAME
+
+# Delete a pod
+
+Delete pod, let k8s redeploy it
+
+    kubectl delete pod PODNAME
