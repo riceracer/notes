@@ -27,3 +27,8 @@
 Delete pod, let k8s redeploy it
 
     kubectl delete pod PODNAME
+
+# Get kubenetes versions
+
+    kubectl version
+    kubectl get nodes
