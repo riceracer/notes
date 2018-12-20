@@ -1,5 +1,12 @@
 # Networking
 
+## Show host IP Address
+
+    hostname -i
+    hostname -I
+
+* The capital-I form shows all ip addresses - useful if the first command just returns the loopback address.
+
 ## Show ports in use
 
     sudo lsof -i
