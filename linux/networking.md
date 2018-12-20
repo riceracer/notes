@@ -21,6 +21,10 @@
 
     dig +short www.google.com
 
+## Dig to find the hostname for an ip address (reverse lookup)
+
+    dig -x IPADDRESS
+
 ## SSH Tunnel
 
 Create a tunnel between local and remove host and port
