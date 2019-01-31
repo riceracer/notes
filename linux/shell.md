@@ -131,3 +131,9 @@ zip archivename file1 file2
 unzip archivename.zip
 ```
 * saves archive as archivename.zip
+
+# shuf
+
+Randomly select N lines from a file:
+
+    shuf -n N input > output
