@@ -11,11 +11,15 @@ export ZOOKEEPER_SERVER=zookeeper:2181
 
 ## List topics
 
+First line is vanilla kafka, second is confluent kafka.
+
     $KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZOOKEEPER_SERVER --list
+    $KAFKA_HOME/bin/kafka-topics --zookeeper $ZOOKEEPER_SERVER --list
 
 ## Read topic with console consumer
 
     $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server $KAFKA_SERVER --topic my-topic-name
+    $KAFKA_HOME/bin/kafka-console-consumer --bootstrap-server $KAFKA_SERVER --topic my-topic-name
 
 * The JMX_PORT thing may or may not be necessary
 * Other args:
@@ -27,10 +31,12 @@ export ZOOKEEPER_SERVER=zookeeper:2181
 Shows in sync replicas and status
 
     $KAFKA_HOME/bin/kafka-topics.sh --zookeeper=$ZOOKEEPER_SERVER --describe --topic my-topic-name 
+    $KAFKA_HOME/bin/kafka-topics --zookeeper=$ZOOKEEPER_SERVER --describe --topic my-topic-name
 
 ## Read topic-specific config
 
     $KAFKA_HOME/bin/kafka-configs.sh --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --describe
+    $KAFKA_HOME/bin/kafka-configs --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --describe
 
 ## Set topic-specific config
 
@@ -38,6 +44,7 @@ Shows in sync replicas and status
 
 ```
 $KAFKA_HOME/bin/kafka-configs.sh --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --alter --add-config max.message.bytes=1500012
+$KAFKA_HOME/bin/kafka-configs --zookeeper=$ZOOKEEPER_SERVER --entity-type topics --entity-name TOPIC_NAME --alter --add-config max.message.bytes=1500012
 ```
 
 ## Check kafka version
@@ -56,10 +63,12 @@ ls  $KAFKA_HOME/libs/kafka_*
 
 ```
 $KAFKA_HOME/bin/kafka-consumer-groups.sh --bootstrap-server $KAFKA_SERVER --list
+$KAFKA_HOME/bin/kafka-consumer-groups --bootstrap-server $KAFKA_SERVER --list
 ```
 
 ## Describe consumer group (show per-partition lag and offsets)
 
 ```
 $KAFKA_HOME/bin/kafka-consumer-groups.sh --bootstrap-server $KAFKA_SERVER --describe --group CONSUMER-GROUP
+$KAFKA_HOME/bin/kafka-consumer-groups --bootstrap-server $KAFKA_SERVER --describe --group CONSUMER-GROUP
 ```
