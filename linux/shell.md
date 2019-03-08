@@ -47,6 +47,14 @@ fi
 ## Epoch timestamp to human date
 
     date -d @1499568328
+    
+## Output date as iso-8601
+
+    date --iso-8601=seconds
+
+## Output date as epoch second
+
+    date +%s
 
 ## Loop through series of dates
 
