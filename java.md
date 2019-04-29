@@ -51,3 +51,26 @@ foo.sort(Comparator.comparing(Pair::getLeft));
 List<TimeObject> positions = ...;
 positions.sort(Comparator.comparing(pos -> pos.getTime()));
 ```
+
+# Gradle
+
+## force re-build steps
+
+    ./gradlew test --rerun-tasks
+    
+## verbose output
+
+    -i
+
+## show stdout / stderr on tests
+
+Add to the `build.gradle` file
+
+```
+test {
+    testLogging {
+        showStandardStreams = true
+        events = ['standard_out', 'standard_error']
+    }
+}
+```
