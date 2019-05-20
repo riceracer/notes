@@ -35,3 +35,21 @@ sudo passwd USERNAME
 ```
 sudo apt-get install ntp
 ```
+
+## Mount drive
+
+```
+# show block ids
+sudo blkid
+
+# make target directory
+sudo mkdir /data
+
+# temporary mount
+sudo mount /dev/sda1 /data
+
+# permanent mount
+sudo vi /etc/fstab
+# add a new line using the uuid from the blkid command as the identifier
+UUID=fc791832-7c90-45b5-9648-4aad36e9fd0a       /data   ext4    defaults        0       2
+```
