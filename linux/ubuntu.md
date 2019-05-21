@@ -53,3 +53,13 @@ sudo vi /etc/fstab
 # add a new line using the uuid from the blkid command as the identifier
 UUID=fc791832-7c90-45b5-9648-4aad36e9fd0a       /data   ext4    defaults        0       2
 ```
+
+## Set vim as default editor
+
+```
+vi ~/.bashrc
+
+# add to file
+export VISUAL=vim
+export EDITOR="$VISUAL"
+```
