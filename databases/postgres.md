@@ -9,6 +9,14 @@
 ## Toggle query timing
 
     \timing
+    
+## Show all tables
+
+    \dt
+   
+## Describe table
+
+    \d TABLE_NAME
 
 ## Get date from timestamp
 
