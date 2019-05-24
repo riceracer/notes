@@ -75,4 +75,5 @@ WHERE
 ```
 
 * replace DATABASE_NAME with the actual db name
-
+* The row count isn't exactly right, but it will give a faster ballpark than querying each table.
+* Some tables might report 0 records even if they have a few records.
