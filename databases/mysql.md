@@ -61,3 +61,18 @@ SHOW VARIABLES LIKE "secure_file_priv";
 | secure_file_priv | /var/lib/mysql-files/ |
 +------------------+-----------------------+
 ```
+
+## Select (approximate) row count of all tables in a DB
+
+```
+SELECT 
+    table_name, 
+    table_rows 
+FROM 
+    `information_schema`.`tables` 
+WHERE 
+    `table_schema` = 'DATABASE_NAME';
+```
+
+* replace DATABASE_NAME with the actual db name
+
