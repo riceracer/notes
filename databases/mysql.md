@@ -77,3 +77,19 @@ WHERE
 * replace DATABASE_NAME with the actual db name
 * The row count isn't exactly right, but it will give a faster ballpark than querying each table.
 * Some tables might report 0 records even if they have a few records.
+
+## Dump table
+
+See https://dev.mysql.com/doc/refman/5.7/en/mysqldump-sql-format.html (or equivalent for newer version) for details
+
+```
+mysqldump DB_NAME TABLE1 TABLE2 TABLE3
+
+# Only dump all table definitions
+mysqldump --default-character-set=utf8 --no-data -u DB_USER -p DB_NAME > /var/lib/mysql/backups/table_defs_only.sql
+
+# Only dump data from specific tables
+TABLE=foo
+mysqldump --default-character-set=utf8 --no-create-info -u DB_USER -p DB_NAME $TABLE > /var/lib/mysql/backups/table_${TABLE}.sql
+
+```
