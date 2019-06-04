@@ -58,6 +58,8 @@ Follow instructions here: https://github.com/NVIDIA/nvidia-docker
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 ```
 
+# Docker images
+
 ## Download docker image from gcr and peak inside
 
 Use this if you have a docker image in GCR or other remote repo and want to peak inside without running it.
