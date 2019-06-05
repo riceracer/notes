@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 
 
 def plot_metrics(x, y1, y2):
-    # Show bar chart of Distinct MMSIs in RDV per month
     idx = np.arange(len(x))
     w = 0.4
     plt.figure(figsize=(12, 10))
