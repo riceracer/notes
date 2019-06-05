@@ -9,8 +9,8 @@ def plot_metrics(x, y1, y2):
     idx = np.arange(len(x))
     w = 0.4
     plt.figure(figsize=(12, 10))
-    plt.bar(idx, y1, w, label='This Month')
-    plt.bar(idx + w, y2, w, label='Cummulative')
+    plt.bar(idx, y1, w, label='Series 1')
+    plt.bar(idx + w, y2, w, label='Series 2')
     plt.ylabel('Count')
     plt.title('My Title')
     plt.xticks(idx + w / 2, x, rotation="vertical")
