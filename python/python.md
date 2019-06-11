@@ -218,3 +218,14 @@ foo = [-10, 30, None, -50, 100, 15, None]
 min(x for x in foo if x is not None)
 max(x for x in foo if x is not None)
 ```
+
+## Read from file or stdin
+
+```
+import fileinput
+
+for line in fileinput.input():
+    line = line.rstrip()
+    print "l={}".format(line)
+   
+```
