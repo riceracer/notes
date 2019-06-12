@@ -50,6 +50,9 @@ input("Press Enter to exit...")
 df = pd.read_csv('intput.csv', header=None, names=['field1, 'field2', 'field3'])
 ```
 
+Other useful args:
+* compression='gzip' - read directly from a gzipped file
+
 ## Write to CSV
 
 ```
