@@ -104,3 +104,10 @@ Skip empty partitions:
 ```
 select * from schema_v('TABLENAME_partition') where ds_raw > 0;
 ```
+
+## Query for a word match one member of an array type column
+
+```
+select * from TABLENAME where 'foo' = any(COLUMN);
+```
+
