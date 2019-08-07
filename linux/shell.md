@@ -145,3 +145,7 @@ unzip archivename.zip
 Randomly select N lines from a file:
 
     shuf -n N input > output
+
+# Read UTF-16 with less
+
+    cat file.txt | iconv -f utf-16 -t utf-8 | LESSCHARSET=utf-8 less
