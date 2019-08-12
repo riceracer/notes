@@ -10,6 +10,31 @@ git branch --set-upstream-to=origin/$BRANCH $BRANCH
 git pull
 ```
 
+Bash script:
+
+```
+#!/bin/bash
+  
+set -e
+
+export BRANCH=$1
+if [ -z "$BRANCH" ]
+then
+    echo "Must provide a branch name"
+    exit 1
+fi
+
+echo New Branch=$BRANCH
+
+git checkout master
+git pull
+git checkout -b $BRANCH
+git push origin $BRANCH
+git branch --set-upstream-to=origin/$BRANCH $BRANCH
+git pull
+git status
+```
+
 ## Squash Commits
 
 If needed - use git log to see how many commits you wish to squash on the current branch.
