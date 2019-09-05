@@ -1,4 +1,12 @@
-# Plot a bar chart with two series
+## Mac install matplotlib
+
+Using conda, in your target env:
+
+```
+python -mpip install matplotlib
+```
+
+## Plot a bar chart with two series
 
 ```
 import numpy as np
